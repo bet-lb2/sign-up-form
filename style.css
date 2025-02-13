@@ -1,6 +1,7 @@
 :root {
-    --main-color: #596d48;
+    --button-background-color: #596d48;
     --input-border-color: #e5e7eb;
+    --span-font-color: #596d48;
 }
 
 @font-face {
@@ -57,7 +58,7 @@ body {
 
 #form-container {
     background-color: #eee;
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 #form-container > :not(form) {
@@ -67,28 +68,67 @@ body {
 #form-container > p:not(:last-child) {
     font-size: 1.5rem;
     font-weight: 600;
-    width: 60%;
+    width: min(60%, 715px);
     margin-bottom: 40px;
 }
 
 #form {
-    background-color: white;;
+    background-color: white;
+    padding-top: 25px;
     padding-left: 50px;
     height: 40%;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px lightgray;
 }
 
 #form p {
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 #form label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
     color: #333
 }
 
 #form input {
     border: 1px solid var(--input-border-color);
     border-radius: 5px;
-    padding: 5px 0;
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+#form .container {
+    display: flex;
+}
+
+#form .container .left {
+    margin-right: 100px;
+}
+
+#form-container button {
+    font-size: 1.2rem;
+    color: white;
+    padding: 15px 40px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-background-color);
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+#form-container p:last-child {
+    font-size: 1.15rem;
+}
+
+#form-container p:last-child span {
+    margin-left: 5px;
+    font-weight: 600;
+    color: var(--span-font-color)
 }
