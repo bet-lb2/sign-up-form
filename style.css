@@ -1,3 +1,8 @@
+:root {
+    --main-color: #596d48;
+    --input-border-color: #e5e7eb;
+}
+
 @font-face {
     font-family: "Norse-Bold";
     src: url("./assets/Norse-Bold.otf");
@@ -7,6 +12,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
 }
 
 #image-container {
@@ -43,4 +53,42 @@
 
 #image-container a {
     color: inherit;
+}
+
+#form-container {
+    background-color: #eee;
+    padding-top: 200px;
+}
+
+#form-container > :not(form) {
+    margin-left: 50px;
+}
+
+#form-container > p:not(:last-child) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+#form {
+    background-color: white;;
+    padding-left: 50px;
+    height: 40%;
+}
+
+#form p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#form label {
+    font-size: 0.7rem;
+    color: #333
+}
+
+#form input {
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    padding: 5px 0;
 }
